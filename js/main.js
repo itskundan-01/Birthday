@@ -38,3 +38,15 @@ galleryImages.forEach((img) => {
     img.classList.toggle('zoomed');
   });
 });
+
+// Hide splash screen and show main content after 3 seconds
+document.addEventListener("DOMContentLoaded", () => {
+  const splashScreen = document.getElementById("splash-screen");
+  const mainContent = document.getElementById("main-content");
+
+  setTimeout(() => {
+    splashScreen.style.display = "none"; // Hide splash screen
+    mainContent.classList.add("visible"); // Show main content
+    document.body.style.overflow = "auto"; // Restore scrolling
+  }, 5000); // 3 seconds
+});

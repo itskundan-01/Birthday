@@ -9,6 +9,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
+  <div id="splash-screen">
+    <h1>Happy Birthday<br><br>Dr. U Harita Mam</h1>
+    <canvas id="birthday"></canvas>
+  </div>
+
   <!-- Header Section -->
   <header class="header">
     <h1 class="birthday-text">
@@ -18,11 +24,11 @@
 
   <!-- Music Player -->
   <audio id="birthday-song" src="assets/birthday.mp3" preload="auto" autoplay loop></audio>
-  <button id="toggle-music" class="btn-toggle-music">Pause Music</button>
+  <button id="toggle-music" class="btn-toggle-music">Music</button>
 
   <!-- Introduction Section -->
   <section class="introduction">
-    <p class="message">Wishing you all the joy and happiness on your special day!</p>
+    <p class="message"><b>Wishing you all the joy and happiness on your special day!</b></p>
   </section>
 
   <!-- Gallery Section -->
@@ -57,17 +63,19 @@
         <span>Special Person of my life</span>
       </div>
     </div>
+    <br>
     <button class="btn-show-popup">Click for a Surprise</button>
     <div class="popup hidden">
-      <p>You’re the reason 14th December is so special! Happy Birthday!</p>
-      <button class="btn-close-popup">Close</button>
+      <p><b>You’re the reason 14th December is so special! Happy Birthday!</b></p>
+      <button class="btn-close-popup">X</button>
     </div>
   </section>
 
   <!-- Footer -->
   <footer class="footer">
-    <p class="cntr">Celebrate your day to the fullest!</p>
+    <p class="cntr"><b>Celebrate your day to the fullest!</b></p>
   </footer>
+  <script src="js/firework.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

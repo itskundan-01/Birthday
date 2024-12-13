@@ -1,3 +1,52 @@
+
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    /* overflow: hidden; Hide scrolling during splash */
+    background: #020202;
+}
+
+#splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #020202;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+#splash-screen h1 {
+    color: #fff;
+    font-family: "Source Sans Pro";
+    font-size: 4rem;
+    font-weight: 900;
+    margin-top: 200px;
+    padding-top: 200px;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+canvas#birthday {
+    display: block;
+}
+
+#main-content {
+    visibility: hidden; /* Initially hide the main content */
+    position: relative;
+}
+
+#main-content.visible {
+    visibility: visible; /* Make visible after splash ends */
+}
+    
+
 /* General Reset */
 * {
     margin: 0;
@@ -23,20 +72,20 @@ body {
 
 .birthday-text .title {
     font-family: 'Pacifico', cursive;
-    font-size: 2.4rem;
+    font-size: 2.2rem;
     color: #ff6f61;
 }
 
 .birthday-text .name {
     font-family: 'Pacifico', cursive;
-    font-size: 3rem;
+    font-size: 2.6rem;
     color: #ff6f61;
 }
 .cntr{
     text-align: center;
 }
 .start{
-    color: #5c05ff;
+    color: #db0839;
     text-align: center;
 }
 /* Music Button */
@@ -176,3 +225,51 @@ body {
 .btn-show-popup:hover {
     background-color: #e75b51;
 }
+
+/* Popup */
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    max-width: 90%;
+    text-align: center;
+}
+
+/* Visible popup */
+.popup.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Close button */
+.btn-close-popup {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    background: #f34d3e;
+    color: white;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+}
+
+.btn-close-popup:hover {
+    background: #ff0202;
+}
+
