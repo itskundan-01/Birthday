@@ -21,39 +21,24 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.header h1 {
+.birthday-text .title {
+    font-family: 'Pacifico', cursive;
+    font-size: 2.4rem;
+    color: #ff6f61;
+}
+
+.birthday-text .name {
     font-family: 'Pacifico', cursive;
     font-size: 3rem;
     color: #ff6f61;
 }
-
-/* Balloons */
-.balloon-container {
-    position: relative;
-    height: 200px;
-    overflow: hidden;
+.cntr{
+    text-align: center;
 }
-
-.balloon {
-    width: 80px;
-    height: 100px;
-    background: linear-gradient(to bottom, #ff6f61, #ff9a9e);
-    border-radius: 50%;
-    position: absolute;
-    bottom: -100px;
-    animation: rise 8s linear infinite;
+.start{
+    color: #5c05ff;
+    text-align: center;
 }
-
-.balloon:nth-child(2) { left: 20%; animation-duration: 7s; }
-.balloon:nth-child(3) { left: 40%; animation-duration: 6s; }
-.balloon:nth-child(4) { left: 60%; animation-duration: 9s; }
-.balloon:nth-child(5) { left: 80%; animation-duration: 7.5s; }
-
-@keyframes rise {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-100%); }
-}
-
 /* Music Button */
 .btn-toggle-music {
     position: fixed;
@@ -100,15 +85,15 @@ body {
 }
 
 .gallery-container img {
-    width: 250px;
-    height: 200px;
-    object-fit: cover;
+    max-width: 300px;
     border-radius: 10px;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease, max-width 0.3s ease;
+    cursor: pointer;
 }
 
-.gallery-container img:hover {
-    transform: scale(1.1);
+.gallery-container img.zoomed {
+    max-width: 90vw;
+    transform: scale(1.2);
 }
 
 /* Special Messages */
@@ -191,5 +176,3 @@ body {
 .btn-show-popup:hover {
     background-color: #e75b51;
 }
-
-
